@@ -1,7 +1,13 @@
-export default function Product() {
+interface ProductProps {
+    params: {
+        id: string
+    }
+}
+
+export default function Product(props: ProductProps) {
     return (
         <>
-            <div>Product</div>
+            <div>Product {props.params.id}</div>
         </>
     )
 }
